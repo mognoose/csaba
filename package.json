@@ -4,7 +4,9 @@
   "private": true,
   "scripts": {
     "serve": "vue-cli-service serve",
-    "build": "vue-cli-service build"
+    "build": "vue-cli-service build",
+    "predeploy": "vue-cli-service build",
+    "deploy": "scp -r dist/* root@sapatti.synology.me:/volume1/web"
   },
   "dependencies": {
     "core-js": "^3.8.3",

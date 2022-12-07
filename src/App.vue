@@ -1,30 +1,58 @@
-<template>
-  <nav>
-    <router-link to="/">Home</router-link> |
-    <router-link to="/about">About</router-link>
-  </nav>
+<template class="main">
+  <Navigation/>
   <router-view/>
 </template>
 
+<script>
+import Navigation from '@/components/Navigation.vue'
+
+export default {
+  name: 'AppView',
+  components: {
+    Navigation
+  }
+}
+</script>
+
 <style lang="scss">
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap');
+
+html, body {
+    margin: 0;
+    padding: 0;
+}
 #app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
+  background: url('@/assets/code.jpg') 100% 100% fixed;
+  font-family: 'Roboto', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  color: #cacaca;
   text-align: center;
-  color: #2c3e50;
+  padding: 0px;
+  margin: 0px;
+  min-height: 100vh;
 }
 
-nav {
-  padding: 30px;
+h1{
+  color: #fff;
+  text-shadow: 0px 0px 6px rgba(0,0,0,0.9);
+}
 
-  a {
-    font-weight: bold;
-    color: #2c3e50;
+a:link,
+a:active,
+a:visited,
+a:hover {
+  color: #fff;
+}
 
-    &.router-link-exact-active {
-      color: #42b983;
-    }
-  }
+.block {
+    background-color: rgba(0,0,0,0.3);
+    backdrop-filter: blur(50px);
+    padding: 10em; 
+}
+
+.content {
+  margin: 0;
+  padding: 0;
 }
 </style>
