@@ -46,9 +46,23 @@ a:hover {
 }
 
 .block {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
     background-color: rgba(0,0,0,0.3);
     backdrop-filter: blur(50px);
-    padding: 10em; 
+    padding-top: 10em; 
+    padding-bottom: 10em;
+    @media (min-width: 421px){
+      *:nth-child(1){
+        grid-column-start: 2;
+      }
+      *:nth-child(2){
+        grid-column-start: 3;
+      }
+    }
+    @media (max-width: 420px) {
+      grid-template-columns: 1fr;
+    }
 }
 
 .content {

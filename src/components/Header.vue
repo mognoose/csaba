@@ -29,10 +29,11 @@ export default {
 
 <style scoped>
 header{
-  padding: 4em;
+  padding: 4em auto;
 }
 .logo{
   width: 20%;
+  min-width: 10rem;
   border-radius: 100%;
   margin: 5em;
 }
