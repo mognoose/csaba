@@ -47,7 +47,7 @@ a:hover {
 
 .block {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
     background-color: rgba(0,0,0,0.3);
     backdrop-filter: blur(50px);
     padding-top: 10em; 
