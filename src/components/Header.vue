@@ -1,37 +1,37 @@
 <template>
   <header>
-    <img v-if="img" class="logo" alt="Csaba logo" :src="getImgUrl(img)">
-    <h1>{{heading}}</h1>
+    <img v-if="img" class="logo" alt="Csaba logo" :src="getImgUrl(img)" />
+    <h1>{{ heading }}</h1>
   </header>
 </template>
 
 <script>
 export default {
-  name: 'Header',
+  name: "Header",
 
   props: {
     heading: {
       type: String,
-      default: ''
+      default: "",
     },
     img: {
       type: String,
-      required: false
-    }
+      required: false,
+    },
   },
   methods: {
     getImgUrl(image) {
-      return require('../assets/'+image)
-    }
+      return require("../assets/" + image);
+    },
   },
-}
+};
 </script>
 
 <style scoped>
-header{
+header {
   padding: 4em auto;
 }
-.logo{
+.logo {
   width: 20%;
   min-width: 10rem;
   border-radius: 100%;
