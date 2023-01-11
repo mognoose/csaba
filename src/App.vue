@@ -44,6 +44,7 @@ nav {
 
 #app {
   background: url("@/assets/code.jpg") 100% 100% fixed;
+  background-size: cover;
   font-family: "Roboto", sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -91,5 +92,6 @@ a:hover {
 
 .content {
   padding: 0;
+  padding-bottom: 1em;
 }
 </style>
